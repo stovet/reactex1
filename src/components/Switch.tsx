@@ -21,7 +21,12 @@ function Switch() {
                 <p>ON</p> :
                 <p>OFF</p>
             }
-            <button onClick={() => setSwitchActive(bool)}>Turn {text}</button>
+            {
+                switchActive ? 
+                <button onClick={() => setSwitchActive(false)}>Turn Off</button>:
+                <button onClick={() => setSwitchActive(bool)}>Turn On</button>
+            }
+            {/* <button onClick={() => setSwitchActive(bool)}>Turn {text}</button> */}
             {/* <button onClick={() => setSwitchActive(false)}>Off</button> */}
         </div>
     );
